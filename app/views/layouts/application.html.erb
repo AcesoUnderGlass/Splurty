@@ -29,7 +29,18 @@
   <hr />
   <br class="clear" />
 
-<%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
 
+  <div class="footer">
+    <div class="container"><div class="col-xs-6">
+        <%= link_to "Moar toppings!", "#", :class => 'next-quote' %>        
+      </div>
+      <div class="col-xs-6 footer-blurb">
+        Made by  <a href="http://acesounderglass.com">Elizabeth</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
