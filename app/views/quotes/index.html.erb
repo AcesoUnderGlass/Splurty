@@ -4,12 +4,17 @@
   Here's the <u>heroism advice</u> you can get!
 </h2>
 
-<h1><%=@quote.saying %></h1>
+<h1><%= @quote.saying %></h1>
 <h2 class="pull-right">- <%= @quote.author %></h2>
-<h2>- <%= @quote.author %></h2>
-
 
 <br class="clear" />
 <br />
 <br />
 <br />
+
+<%= link_to 'Delete', controller: 'quotes', action: 'destroy', id: @quote.id, method: :delete  %>
+
+
+<!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#deleteModal">
+  Delete this Quote <%= @quote.id %>
+</button> -->
