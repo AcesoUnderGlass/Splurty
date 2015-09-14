@@ -15,22 +15,22 @@ class QuotesController < ApplicationController
   end
 
   def show
-    Quote.find(params[:id])
-  end
-
-
-  private
-
-  def quote_params
-    params.require(:quote).permit(:saying, :author)
+    @quote = Quote.find(params[:id])    
   end
 
   def delete
-    Quote.find(int).destroy
+    Quote.find(params[:id]).delete
+    redirect_to :index
   end
 
   def destroy
     Quote.find(params[:id]).destroy
     redirect_to :index
+  end
+
+  private
+
+  def quote_params
+    params.require(:quote).permit(:saying, :author)
   end
 end
